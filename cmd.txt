@@ -1,0 +1,3 @@
+docker run -d --rm --name mongodb --network network1 -v /home/euna/sandbag/mongodb_data:/data/db mongo
+
+docker run -d -p 80:80 --rm --name app-backend --network network1 -v $(pwd):/app -v logs:/app/logs -v /app/node_modules emadunan/backend
